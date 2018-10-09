@@ -38,6 +38,7 @@ namespace NMIConsultancy
             welcomeScreen.Close();
         }
         //Opent het medewerker form.
+        //Test
         private void button_Medewerker_Click(object sender, RoutedEventArgs e)
         {
             dMedewerker medewerker = new dMedewerker();
