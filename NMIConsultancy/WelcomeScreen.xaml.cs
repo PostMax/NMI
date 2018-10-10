@@ -23,6 +23,7 @@ namespace NMIConsultancy
         {
             InitializeComponent();
         }
+        /*
         //Opent het opdrachten form.
         private void buttonOpdrachten_Click(object sender, RoutedEventArgs e)
         {
@@ -44,5 +45,6 @@ namespace NMIConsultancy
             medewerker.Show();
             welcomeScreen.Close();
         }
+        */
     }
 }

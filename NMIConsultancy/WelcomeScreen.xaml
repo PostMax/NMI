@@ -12,9 +12,6 @@
             <ColumnDefinition Width="304*"/>
         </Grid.ColumnDefinitions>
         <Label Content="Welkom terug!" HorizontalAlignment="Left" Margin="123.221,102,0,0" VerticalAlignment="Top" Height="50" Width="169" FontSize="24" Grid.Column="1"/>
-        <Button x:Name="button_Medewerker" Content="Medewerker" HorizontalAlignment="Left" Margin="316.4,350,0,0" VerticalAlignment="Top" Width="200" Height="60" FontSize="16" Click="button_Medewerker_Click" Grid.Column="1"/>
-        <Button x:Name="buttonFinancien" Content="Financiën" HorizontalAlignment="Left" Margin="111.221,350,0,0" VerticalAlignment="Top" Width="200" Height="60" FontSize="16" Click="buttonFinancien_Click" Grid.Column="1"/>
-        <Button x:Name="buttonOpdrachten" Content="Opdrachten" HorizontalAlignment="Left" Margin="92,350,0,0" VerticalAlignment="Top" Width="200" Height="60" FontSize="16" Click="buttonOpdrachten_Click" Grid.ColumnSpan="2"/>
         <Label Content="Wat wil je doen?" HorizontalAlignment="Left" Margin="111.221,313,0,0" VerticalAlignment="Top" Width="200" FontSize="18" Grid.Column="1"/>
         <Image HorizontalAlignment="Left" Height="142" Margin="456.221,10,0,0" VerticalAlignment="Top" Width="142" Source="NMI Consultancy App.png" Grid.Column="1"/>
         <TextBlock x:Name="textblockDatum" HorizontalAlignment="Left" Margin="153,157,0,0" TextWrapping="Wrap" Text="Het is vandaag:  een verdomd mooie dag om uit te zoeken hoe je een datum moet displayen."  VerticalAlignment="Top" Height="84" Width="344" FontSize="20" Grid.ColumnSpan="2"/>
