@@ -12,9 +12,14 @@
             <ColumnDefinition Width="304*"/>
         </Grid.ColumnDefinitions>
         <Label Content="Welkom terug!" HorizontalAlignment="Left" Margin="123.221,102,0,0" VerticalAlignment="Top" Height="50" Width="169" FontSize="24" Grid.Column="1"/>
-        <Label Content="Wat wil je doen?" HorizontalAlignment="Left" Margin="111.221,313,0,0" VerticalAlignment="Top" Width="200" FontSize="18" Grid.Column="1"/>
+        <Label Content="Wat wil je doen?" HorizontalAlignment="Left" Margin="0.4,324,0,0" VerticalAlignment="Top" Width="200" FontSize="18" Grid.Column="1"/>
         <Image HorizontalAlignment="Left" Height="142" Margin="456.221,10,0,0" VerticalAlignment="Top" Width="142" Source="NMI Consultancy App.png" Grid.Column="1"/>
         <TextBlock x:Name="textblockDatum" HorizontalAlignment="Left" Margin="153,157,0,0" TextWrapping="Wrap" Text="Het is vandaag:  een verdomd mooie dag om uit te zoeken hoe je een datum moet displayen."  VerticalAlignment="Top" Height="84" Width="344" FontSize="20" Grid.ColumnSpan="2"/>
+        <ComboBox Text="Klik voor opties" x:Name="cbKeus" Grid.Column="1" HorizontalAlignment="Left" Margin="172.4,297,0,0" VerticalAlignment="Top" Width="120">
+            <Button Content="Financiën"/>
+            <Button Content="Medewerker"/>
+            <Button Content="Opdrachten"/>
+        </ComboBox>
 
     </Grid>
 </Window>
