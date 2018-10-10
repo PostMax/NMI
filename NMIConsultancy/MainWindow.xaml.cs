@@ -22,7 +22,6 @@ namespace NMIConsultancy
  
     public partial class MainWindow : Window
     {
-       
         public MainWindow()
         {
             InitializeComponent();
@@ -109,6 +108,5 @@ namespace NMIConsultancy
         {
             textboxGebruikersnaam.Text = String.Empty;
         }
-        // Test //
     }
 }
