@@ -16,9 +16,9 @@
         <Image HorizontalAlignment="Left" Height="142" Margin="456.221,10,0,0" VerticalAlignment="Top" Width="142" Source="NMI Consultancy App.png" Grid.Column="1"/>
         <TextBlock x:Name="textblockDatum" HorizontalAlignment="Left" Margin="153,157,0,0" TextWrapping="Wrap" Text="Het is vandaag:  een verdomd mooie dag om uit te zoeken hoe je een datum moet displayen."  VerticalAlignment="Top" Height="84" Width="344" FontSize="20" Grid.ColumnSpan="2"/>
         <ComboBox Text="Klik voor opties" x:Name="cbKeus" Grid.Column="1" HorizontalAlignment="Left" Margin="172.4,297,0,0" VerticalAlignment="Top" Width="120">
-            <Button Content="Financiën"/>
-            <Button Content="Medewerker"/>
-            <Button Content="Opdrachten"/>
+            <Button x:Name="btFinancien" Content="Financiën" Click="Button_Click"/>
+            <Button x:Name="btMedewerker" Content="Medewerker" Click="btMedewerker_Click"/>
+            <Button x:Name="btOpdrachten" Content="Opdrachten" Click="btOpdrachten_Click"/>
         </ComboBox>
 
     </Grid>
