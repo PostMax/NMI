@@ -22,6 +22,7 @@ namespace NMIConsultancy
         public WelcomeScreen()
         {
             InitializeComponent();
+            //Geeft een tekst weer in een combobox
             cbKeus.SelectedIndex = 0;
         }
 
