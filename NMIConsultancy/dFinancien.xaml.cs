@@ -22,6 +22,37 @@ namespace NMIConsultancy
         public Financien()
         {
             InitializeComponent();
+            cbKeus.SelectedIndex = 0;
+        }
+
+
+
+
+
+
+
+
+        //Algemeen deel dat zorgt voor navigatie binnen de applicatie.
+        //Opent medewerker form.
+        private void btMedewerker_Click(object sender, RoutedEventArgs e)
+        {
+            dMedewerker medewerker = new dMedewerker();
+            medewerker.Show();
+            this.Close();
+        }
+        //Opent opdrachten form.
+        private void btOpdrachten_Click(object sender, RoutedEventArgs e)
+        {
+            Opdrachten opdrachten = new Opdrachten();
+            opdrachten.Show();
+            this.Close();
+        }
+        //Opent thuisscherm.
+        private void btWelcomeScreen_Click(object sender, RoutedEventArgs e)
+        {
+            WelcomeScreen welcomeScreen = new WelcomeScreen();
+            welcomeScreen.Show();
+            this.Close();
         }
     }
 }

@@ -22,6 +22,7 @@ namespace NMIConsultancy
         public WelcomeScreen()
         {
             InitializeComponent();
+            cbKeus.SelectedIndex = 0;
         }
 
         //Opent financiën form.

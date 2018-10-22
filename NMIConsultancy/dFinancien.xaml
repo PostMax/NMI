@@ -5,9 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NMIConsultancy"
         mc:Ignorable="d"
-        Title="Financien" Height="450" Width="800">
+        Title="Financien" Height="600" Width="1000">
     <Grid>
-        <ComboBox HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="135,13,0,0" VerticalAlignment="Top" Width="20"/>
+        <ComboBox x:Name="cbKeus" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="Wat wil je doen?"/>
+            <Button  x:Name="btMedewerker" Content="Medewerker" Click="btMedewerker_Click" FontSize="16"/>
+            <Button  x:Name="btOpdrachten" Content="Opdrachten" Click="btOpdrachten_Click" FontSize="16"/>
+            <Button  x:Name="btWelcomeScreen" Content="Thuis" Click="btWelcomeScreen_Click" FontSize="16"/>
+        </ComboBox>
     </Grid>
 </Window>
