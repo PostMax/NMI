@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NMIConsultancy"
         mc:Ignorable="d"
-        Title="Opdrachten" Height="450" Width="800">
+        Title="Opdrachten" Height="600" Width="1000">
     <Grid>
-        
+        <ComboBox x:Name="cbKeus" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="Wat wil je doen?"/>
+            <Button x:Name="btFinancien" Content="Financien" FontSize="16" Click="btFinancien_Click"/>
+            <Button x:Name="btMedewerker" Content="Medewerker" FontSize="16" Click="btMedewerker_Click"/>
+            <Button x:Name="btWelcomeScreen" Content="Thuis" FontSize="16" Click="btWelcomeScreen_Click"/>
+        </ComboBox>
+
     </Grid>
 </Window>
