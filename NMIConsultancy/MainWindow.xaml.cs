@@ -28,7 +28,7 @@ namespace NMIConsultancy
         }
 
         //Aparte methode om de connectionstring op te halen.
-        static private string GetConnectionString()
+        private static string GetConnectionString()
         {
             return "Data Source=mssql.fhict.local;Initial Catalog=dbi403800_nmi;Persist Security Info=True;User ID=dbi403800_nmi;Password=nmi";
         }
