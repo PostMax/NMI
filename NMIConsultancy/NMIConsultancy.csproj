@@ -55,23 +55,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="dFinancien.xaml.cs">
+    <Compile Include="Financiën\dFinancien.xaml.cs">
       <DependentUpon>dFinancien.xaml</DependentUpon>
     </Compile>
-    <Compile Include="dMedewerker.xaml.cs">
+    <Compile Include="Medewerker\dMedewerker.xaml.cs">
       <DependentUpon>dMedewerker.xaml</DependentUpon>
     </Compile>
-    <Compile Include="dOpdrachten.xaml.cs">
+    <Compile Include="Opdrachten\dOpdrachten.xaml.cs">
       <DependentUpon>dOpdrachten.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WelcomeScreen.xaml.cs">
+    <Compile Include="Welkomstscherm\WelcomeScreen.xaml.cs">
       <DependentUpon>WelcomeScreen.xaml</DependentUpon>
     </Compile>
-    <Page Include="dFinancien.xaml">
+    <Page Include="Financiën\dFinancien.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="Hoofdscherm\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -79,19 +79,19 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Hoofdscherm\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="dMedewerker.xaml">
+    <Page Include="Medewerker\dMedewerker.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="dOpdrachten.xaml">
+    <Page Include="Opdrachten\dOpdrachten.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="WelcomeScreen.xaml">
+    <Page Include="Welkomstscherm\WelcomeScreen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
