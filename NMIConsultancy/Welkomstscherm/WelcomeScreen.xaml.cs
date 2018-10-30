@@ -49,5 +49,7 @@ namespace NMIConsultancy
             opdrachten.Show();
             welcomeScreen.Close();
         }
+
+        //Random
     }
 }
