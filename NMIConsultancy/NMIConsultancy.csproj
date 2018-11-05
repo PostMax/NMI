@@ -61,9 +61,11 @@
     <Compile Include="Medewerker\dMedewerker.xaml.cs">
       <DependentUpon>dMedewerker.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Opdrachten\DatabaseConnectie.cs" />
     <Compile Include="Opdrachten\dOpdrachten.xaml.cs">
       <DependentUpon>dOpdrachten.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Opdrachten\Klant.cs" />
     <Compile Include="Welkomstscherm\WelcomeScreen.xaml.cs">
       <DependentUpon>WelcomeScreen.xaml</DependentUpon>
     </Compile>
