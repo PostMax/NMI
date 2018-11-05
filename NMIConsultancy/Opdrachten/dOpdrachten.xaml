@@ -1,13 +1,17 @@
-﻿<Window x:Class="NMIOpdrachten.MainWindow"
+﻿<Window x:Class="NMIConsultancy.Opdrachten"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:NMIOpdrachten"
+        xmlns:local="clr-namespace:NMIConsultancy"
         mc:Ignorable="d"
-        Title="NMI Consultancty" Height="625" Width="800">
+        Title="dOpdrachten" Height="625" Width="800">
     <Grid Margin="0,0,0,1">
-        <Label Content="Klanten" HorizontalAlignment="Left" Margin="360,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.447,0.385" FontSize="20" Width="78"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="317*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Klanten" HorizontalAlignment="Left" Margin="199.975,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.447,0.385" FontSize="20" Width="78" Grid.Column="1"/>
         <ComboBox x:Name="cbKeus" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="120">
             <ComboBoxItem Content="Wat wil je doen?"/>
             <Button x:Name="btFinancien" Content="Financien" FontSize="16" Click="btFinancien_Click"/>
@@ -15,11 +19,11 @@
             <Button x:Name="btWelcomeScreen" Content="Thuis" FontSize="16" Click="btWelcomeScreen_Click"/>
         </ComboBox>
         <Label Content="Invoer" HorizontalAlignment="Left" Margin="79,88,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.447,0.385" FontSize="15"/>
-        <TextBox x:Name="tbNaam" HorizontalAlignment="Left" Height="23" Margin="117,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
-        <TextBox x:Name="tbEmail" HorizontalAlignment="Left" Height="23" Margin="117,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
-        <TextBox x:Name="tbAdres" HorizontalAlignment="Left" Height="23" Margin="117,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
-        <TextBox x:Name="tbGeslacht" HorizontalAlignment="Left" Height="23" Margin="117,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
-        <TextBox x:Name="tbPostcode" HorizontalAlignment="Left" Height="23" Margin="117,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="tbNaam" HorizontalAlignment="Left" Height="23" Margin="117,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="tbEmail" HorizontalAlignment="Left" Height="23" Margin="117,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="tbAdres" HorizontalAlignment="Left" Height="23" Margin="117,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="tbGeslacht" HorizontalAlignment="Left" Height="23" Margin="117,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="tbPostcode" HorizontalAlignment="Left" Height="23" Margin="117,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Grid.ColumnSpan="2"/>
         <Label Content="Adres:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="11,179,0,0"/>
         <Label Content="Naam:" HorizontalAlignment="Left" Margin="13,123,0,0" VerticalAlignment="Top"/>
         <Label Content="Email:" HorizontalAlignment="Left" Margin="13,148,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.537,0.212"/>
@@ -27,16 +31,15 @@
         <Label Content="Postcode:" HorizontalAlignment="Left" Margin="11,236,0,0" VerticalAlignment="Top"/>
         <Label Content="Regio:" HorizontalAlignment="Left" Margin="11,264,0,0" VerticalAlignment="Top"/>
         <Label Content="Bedrijf:" HorizontalAlignment="Left" Margin="10,293,0,0" VerticalAlignment="Top"/>
-        <Label Content="Overzicht" HorizontalAlignment="Left" Margin="491,88,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.447,0.385" FontSize="15"/>
+        <Label Content="Overzicht" HorizontalAlignment="Left" Margin="330.975,88,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.447,0.385" FontSize="15" Grid.Column="1"/>
         <Label Content="Reviews" HorizontalAlignment="Left" Margin="10,354,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.447,0.385" FontSize="16"/>
-        <DataGrid HorizontalAlignment="Left" Height="193" Margin="11,390,0,0" VerticalAlignment="Top" Width="321"/>
-        <DataGrid HorizontalAlignment="Left" Height="193" Margin="296,123,0,0" VerticalAlignment="Top" Width="486"/>
-        <Button x:Name="btVerwijderen" Content="Verwijderen" HorizontalAlignment="Left" Margin="296,321,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="btWijzigen" Content="Wijzigen" HorizontalAlignment="Left" Margin="376,321,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="btInvoerOpdracht" Content="Invoer" HorizontalAlignment="Left" Margin="140,321,0,0" VerticalAlignment="Top" Width="75"/>
-        <Image Margin="456,390,30,10" Source="Image1.png" Stretch="Fill"/>
-        <Label Content="Gemiddelde cijfer per maand:" HorizontalAlignment="Left" Margin="456,359,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.447,0.385"/>
-        <TextBox x:Name="tbRegio" HorizontalAlignment="Left" Height="23" Margin="117,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
-        <TextBox x:Name="tbBedrijf" HorizontalAlignment="Left" Height="23" Margin="117,291,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+        <DataGrid HorizontalAlignment="Left" Height="193" Margin="11,390,0,0" VerticalAlignment="Top" Width="321" Grid.ColumnSpan="2"/>
+        <DataGrid HorizontalAlignment="Left" Height="193" Margin="135.975,123,0,0" VerticalAlignment="Top" Width="486" Grid.Column="1"/>
+        <Button x:Name="btVerwijderen" Content="Verwijderen" HorizontalAlignment="Left" Margin="135.975,321,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1"/>
+        <Button x:Name="btWijzigen" Content="Wijzigen" HorizontalAlignment="Left" Margin="215.975,321,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1"/>
+        <Button x:Name="btInvoerOpdracht" Content="Invoer" HorizontalAlignment="Left" Margin="140,321,0,0" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="2"/>
+        <Label Content="Gemiddelde cijfer per maand:" HorizontalAlignment="Left" Margin="295.975,359,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.447,0.385" Grid.Column="1"/>
+        <TextBox x:Name="tbRegio" HorizontalAlignment="Left" Height="23" Margin="117,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="tbBedrijf" HorizontalAlignment="Left" Height="23" Margin="117,291,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Grid.ColumnSpan="2"/>
     </Grid>
 </Window>

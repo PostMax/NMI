@@ -12,7 +12,6 @@
             <ColumnDefinition Width="263*"/>
             <ColumnDefinition Width="486*"/>
         </Grid.ColumnDefinitions>
-        <Image Margin="262.2,10,10.4,231" Source="NMI Consultancy App.png" Stretch="Fill" Grid.Column="2"/>
         <Button x:Name="buttonLogin" Content="Login
 " HorizontalAlignment="Left" Margin="4.2,295,0,0" VerticalAlignment="Top" Width="179" Height="49" Grid.Column="2" Click="buttonLogin_Click"/>
         <PasswordBox x:Name="textboxWachtwoord" HorizontalAlignment="Left" Margin="231.304,216,0,0" VerticalAlignment="Top" Width="252" Height="37" FontSize="16" Grid.ColumnSpan="2" Grid.Column="1"/>
