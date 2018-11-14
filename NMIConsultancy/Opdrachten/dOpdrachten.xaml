@@ -5,13 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NMIConsultancy"
         mc:Ignorable="d"
-        Title="dOpdrachten" Height="625" Width="800">
+        Title="dOpdrachten" Height="691" Width="888">
     <Grid Margin="0,0,0,1">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="80*"/>
-            <ColumnDefinition Width="317*"/>
+            <ColumnDefinition Width="177*"/>
+            <ColumnDefinition Width="483*"/>
+            <ColumnDefinition Width="220*"/>
         </Grid.ColumnDefinitions>
-        <Label Content="Klanten" HorizontalAlignment="Left" Margin="199.975,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.447,0.385" FontSize="20" Width="78" Grid.Column="1"/>
+        <Label Content="Klanten" HorizontalAlignment="Left" Margin="200,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.447,0.385" FontSize="20" Width="78" Grid.Column="1"/>
         <ComboBox x:Name="cbKeus" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="120">
             <ComboBoxItem Content="Wat wil je doen?"/>
             <Button x:Name="btFinancien" Content="Financien" FontSize="16" Click="btFinancien_Click"/>
@@ -31,15 +32,29 @@
         <Label Content="Postcode:" HorizontalAlignment="Left" Margin="11,236,0,0" VerticalAlignment="Top"/>
         <Label Content="Regio:" HorizontalAlignment="Left" Margin="11,264,0,0" VerticalAlignment="Top"/>
         <Label Content="Bedrijf:" HorizontalAlignment="Left" Margin="10,293,0,0" VerticalAlignment="Top"/>
-        <Label Content="Overzicht" HorizontalAlignment="Left" Margin="330.975,88,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.447,0.385" FontSize="15" Grid.Column="1"/>
-        <Label Content="Reviews" HorizontalAlignment="Left" Margin="10,354,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.447,0.385" FontSize="16"/>
-        <DataGrid HorizontalAlignment="Left" Height="193" Margin="11,390,0,0" VerticalAlignment="Top" Width="321" Grid.ColumnSpan="2"/>
-        <DataGrid HorizontalAlignment="Left" Height="193" Margin="135.975,123,0,0" VerticalAlignment="Top" Width="486" Grid.Column="1"/>
-        <Button x:Name="btVerwijderen" Content="Verwijderen" HorizontalAlignment="Left" Margin="135.975,321,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1"/>
-        <Button x:Name="btWijzigen" Content="Wijzigen" HorizontalAlignment="Left" Margin="215.975,321,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1"/>
-        <Button x:Name="btInvoerOpdracht" Content="Invoer" HorizontalAlignment="Left" Margin="140,321,0,0" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="2"/>
-        <Label Content="Gemiddelde cijfer per maand:" HorizontalAlignment="Left" Margin="295.975,359,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.447,0.385" Grid.Column="1"/>
+        <Label Content="Overzicht" HorizontalAlignment="Left" Margin="331,88,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.447,0.385" FontSize="15" Grid.Column="1"/>
+        <Label Content="Reviews" HorizontalAlignment="Left" Margin="200,360,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.447,0.385" FontSize="20" Grid.Column="1"/>
+        <DataGrid HorizontalAlignment="Left" Height="192" Margin="112,418,0,0" VerticalAlignment="Top" Width="321" Grid.Column="1"/>
+        <DataGrid HorizontalAlignment="Left" Height="193" Margin="200,123,0,0" VerticalAlignment="Top" Width="486" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Button x:Name="btVerwijderenKlant" Content="Verwijderen" HorizontalAlignment="Left" Margin="200,321,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1"/>
+        <Button x:Name="btWijzigenKlant" Content="Wijzigen" HorizontalAlignment="Left" Margin="280,321,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1"/>
+        <Button x:Name="btInvoerKlant" Content="Invoer" HorizontalAlignment="Left" Margin="140,321,0,0" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="2"/>
+        <Label Content="Management rapportages:" HorizontalAlignment="Left" Margin="463,383,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.447,0.385" Grid.Column="1" FontSize="15" Grid.ColumnSpan="2"/>
         <TextBox x:Name="tbRegio" HorizontalAlignment="Left" Height="23" Margin="117,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Grid.ColumnSpan="2"/>
         <TextBox x:Name="tbBedrijf" HorizontalAlignment="Left" Height="23" Margin="117,291,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Grid.ColumnSpan="2"/>
+        <Label Content="Invoer" HorizontalAlignment="Left" Margin="79,387,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.447,0.385" FontSize="15"/>
+        <TextBox x:Name="btKlantID" HorizontalAlignment="Left" Height="23" Margin="117,422,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="tbCijfer" HorizontalAlignment="Left" Height="23" Margin="117,450,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="tbDatum" HorizontalAlignment="Left" Height="23" Margin="117,478,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Grid.ColumnSpan="2"/>
+        <Label Content="KlantID:" HorizontalAlignment="Left" Margin="13,422,0,0" VerticalAlignment="Top"/>
+        <Label Content="Cijfer:" HorizontalAlignment="Left" Margin="13,450,0,0" VerticalAlignment="Top"/>
+        <Label Content="Datum:" HorizontalAlignment="Left" Margin="13,479,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btInvoerReview" Content="Invoer" HorizontalAlignment="Left" Margin="140,506,0,0" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="2"/>
+        <Button x:Name="btVerwijderenReview" Content="Verwijderen" HorizontalAlignment="Left" Margin="112,615,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1"/>
+        <Button x:Name="btWijzigenReview" Content="Wijzigen" HorizontalAlignment="Left" Margin="192,615,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1"/>
+        <Button x:Name="btQuery1" Content="Query 1" HorizontalAlignment="Left" Margin="463,418,0,0" VerticalAlignment="Top" Width="45" Grid.Column="1" RenderTransformOrigin="1.011,0.45" Grid.ColumnSpan="2"/>
+        <Button x:Name="btQuery1_Copy" Content="Query 2" HorizontalAlignment="Left" Margin="45,418,0,0" VerticalAlignment="Top" Width="45" Grid.Column="2"/>
+        <Button x:Name="btQuery1_Copy1" Content="Query 3" HorizontalAlignment="Left" Margin="112,418,0,0" VerticalAlignment="Top" Width="46" Grid.Column="2"/>
+        <Label Content="Uitkomst:" HorizontalAlignment="Left" Margin="45,455,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.447,0.385" Grid.Column="2" FontStyle="Italic"/>
     </Grid>
 </Window>
