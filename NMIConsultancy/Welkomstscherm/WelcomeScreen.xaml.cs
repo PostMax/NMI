@@ -45,7 +45,7 @@ namespace NMIConsultancy
         //Opent opdrachten form.
         private void btOpdrachten_Click(object sender, RoutedEventArgs e)
         {
-            Opdrachten opdrachten = new Opdrachten();
+            dOpdrachten opdrachten = new dOpdrachten();
             opdrachten.Show();
             welcomeScreen.Close();
         }

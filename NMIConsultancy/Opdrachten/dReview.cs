@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NMIConsultancy.Opdrachten
 {
-    class Review
+    class dReview
     {
             private string klantID;
             private int cijfer;
@@ -37,7 +37,7 @@ namespace NMIConsultancy.Opdrachten
 
             }*/
 
-            public Review()
+            public dReview()
             {
                 klantID = "";
                 cijfer = 0;

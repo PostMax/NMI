@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NMIConsultancy.Opdrachten
 {
-    class DatabaseConnectie
+    class dDatabaseConnectie
     {
     }
 }

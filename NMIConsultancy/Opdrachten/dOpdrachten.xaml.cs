@@ -17,9 +17,9 @@ namespace NMIConsultancy
     /// <summary>
     /// Interaction logic for Opdrachten.xaml
     /// </summary>
-    public partial class Opdrachten : Window
+    public partial class dOpdrachten : Window
     {
-        public Opdrachten()
+        public dOpdrachten()
         {
             InitializeComponent();
             cbKeus.SelectedIndex = 0;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NMIConsultancy.Opdrachten
 {
-    class Klant
+    class dKlant
     {
         
             private string naam;
@@ -65,7 +65,7 @@ namespace NMIConsultancy.Opdrachten
 
             }*/
 
-            public Klant()
+            public dKlant()
             {
                 naam = "";
                 email = "";
