@@ -5,13 +5,46 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NMIConsultancy"
         mc:Ignorable="d"
-        Title="Financien" Height="600" Width="1000">
+        Title="Financien" Height="697.2" Width="1537.3">
     <Grid>
-        <ComboBox x:Name="cbKeus" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="120">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1303*"/>
+            <ColumnDefinition Width="127*"/>
+            <ColumnDefinition Width="101*"/>
+        </Grid.ColumnDefinitions>
+        <ComboBox x:Name="cbKeus" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="120" Height="22">
             <ComboBoxItem Content="Wat wil je doen?"/>
             <Button  x:Name="btMedewerker" Content="Medewerker" Click="btMedewerker_Click" FontSize="16"/>
             <Button  x:Name="btOpdrachten" Content="Opdrachten" Click="btOpdrachten_Click" FontSize="16"/>
             <Button  x:Name="btWelcomeScreen" Content="Thuis" Click="btWelcomeScreen_Click" FontSize="16"/>
         </ComboBox>
+        <Label Content="Financiën" HorizontalAlignment="Left" Margin="418,10,0,0" VerticalAlignment="Top" Height="48" Width="194" FontSize="30"/>
+        <Label Content="Kies hieronder je filters:" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Height="32" Width="138"/>
+        <ComboBox x:Name="cbAfdeling" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" Width="120" Height="22">
+            <ComboBoxItem Content="Kies Afdeling" FontSize="14"/>
+            <Button  x:Name="btBusiness" Content="Business" FontSize="16"/>
+            <Button  x:Name="btICT" Content="ICT" FontSize="16"/>
+            <Button  x:Name="btNetwerkbeheer" Content="Netwerkbeheer" FontSize="16"/>
+            <Button  x:Name="btAdministratie" Content="Administratie" FontSize="16"/>
+            <Button  x:Name="btKlantenservice" Content="Klantenservice" FontSize="16"/>
+            <Button  x:Name="btFinancien" Content="Financiën" FontSize="16"/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" Margin="10,113,0,0" VerticalAlignment="Top" Width="120" Height="22">
+            <ComboBoxItem Content="Kies Tijdvak" FontSize="14"/>
+            <Button  x:Name="btJaar" Content="Per Jaar" FontSize="16"/>
+            <Button  x:Name="btMaand" Content="Per Maand" FontSize="16"/>
+        </ComboBox>
+        <DataGrid x:Name="dgWinst" HorizontalAlignment="Left" Height="266" Margin="181,86,0,0" VerticalAlignment="Top" Width="431"/>
+        <DataGrid x:Name="dgOmzet" HorizontalAlignment="Left" Height="266" Margin="181,392,0,0" VerticalAlignment="Top" Width="431"/>
+        <DataGrid x:Name="dgLoonkosten" HorizontalAlignment="Left" Height="266" Margin="630,392,0,0" VerticalAlignment="Top" Width="431"/>
+        <DataGrid x:Name="dgLoonkostenpp" HorizontalAlignment="Left" Height="266" Margin="630,86,0,0" VerticalAlignment="Top" Width="431"/>
+        <Label x:Name="lbWinst" Content="Winst" HorizontalAlignment="Left" Margin="181,55,0,0" VerticalAlignment="Top" Width="431" Height="35" FontSize="16"/>
+        <Label x:Name="lbLoonkosten" Content="Loonkosten" HorizontalAlignment="Left" Margin="630,366,0,0" VerticalAlignment="Top" Width="431" Height="35" FontSize="16"/>
+        <Label x:Name="lbOmzet" Content="Omzet" HorizontalAlignment="Left" Margin="181,366,0,0" VerticalAlignment="Top" Width="431" Height="35" FontSize="16"/>
+        <Label x:Name="lbLoonkostenpp" Content="Loonkosten per werknemer" HorizontalAlignment="Left" Margin="630,54,0,0" VerticalAlignment="Top" Width="431" Height="35" FontSize="16"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="110" Margin="0,40,0,0" VerticalAlignment="Top" Width="176"/>
+        <DataGrid x:Name="Afdelingskosten" HorizontalAlignment="Left" Height="266" Margin="1082,86,0,0" VerticalAlignment="Top" Width="431" Grid.ColumnSpan="3"/>
+        <Label x:Name="lbAfdelingskosten" Content="Afdelingskosten" HorizontalAlignment="Left" Margin="1082,54,0,0" VerticalAlignment="Top" Width="431" Grid.ColumnSpan="3" Height="35" FontSize="16"/>
+        <Label x:Name="lbToevoegen" Content="Toevoegen:" HorizontalAlignment="Left" Margin="10,155,0,0" VerticalAlignment="Top" Height="28" Width="166"/>
     </Grid>
 </Window>
