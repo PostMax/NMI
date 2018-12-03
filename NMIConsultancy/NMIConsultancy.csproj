@@ -55,9 +55,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Financiën\Afdeling.cs" />
     <Compile Include="Financiën\dFinancien.xaml.cs">
       <DependentUpon>dFinancien.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Financiën\FinancienToevoegen.cs" />
+    <Compile Include="Financiën\FinanciënOphalen.cs" />
+    <Compile Include="Financiën\mDatabaseConnectie.cs" />
+    <Compile Include="Financiën\Persoon.cs" />
     <Compile Include="Medewerker\dMedewerker.xaml.cs">
       <DependentUpon>dMedewerker.xaml</DependentUpon>
     </Compile>
