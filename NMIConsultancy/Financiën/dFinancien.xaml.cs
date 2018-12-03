@@ -23,12 +23,27 @@ namespace NMIConsultancy
         {
             InitializeComponent();
             cbKeus.SelectedIndex = 0;
+            Financiën.mDatabaseConnectie database = new Financiën.mDatabaseConnectie();
+            Financiën.Afdeling afdeling = new Financiën.Afdeling();
+            Financiën.Persoon persoon = new Financiën.Persoon();
+            afdeling.FillComboboxAfdeling(database.FillAfdeling(), cbAfdeling);
+            persoon.FillListboxPersonen(database.FillPersoon(), lbPersoneel);
+        }
+
+        //Voor toevoegen van soort financiën. (Inkomst en uitgave)
+        private void BtInkomst_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtUitgave_Click(object sender, RoutedEventArgs e)
+        {
+
         }
 
 
-
-
-
+        //Populate combobox:
+        //https://stackoverflow.com/questions/20344378/populate-combobox-from-a-list
 
 
 
@@ -54,5 +69,8 @@ namespace NMIConsultancy
             welcomeScreen.Show();
             this.Close();
         }
+
+
+
     }
 }

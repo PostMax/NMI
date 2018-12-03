@@ -5,46 +5,74 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NMIConsultancy"
         mc:Ignorable="d"
-        Title="Financien" Height="697.2" Width="1537.3">
-    <Grid>
+        Title="Financien" Height="1006" Width="1895.7">
+    <Grid Margin="0,0,0.2,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="516*"/>
+            <RowDefinition Height="461*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1303*"/>
-            <ColumnDefinition Width="127*"/>
-            <ColumnDefinition Width="101*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="939*"/>
+
+
+
         </Grid.ColumnDefinitions>
-        <ComboBox x:Name="cbKeus" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="120" Height="22">
+        <ComboBox x:Name="cbKeus" HorizontalAlignment="Left" Margin="1,10,0,0" VerticalAlignment="Top" Width="120" Height="22" Grid.Column="2">
             <ComboBoxItem Content="Wat wil je doen?"/>
             <Button  x:Name="btMedewerker" Content="Medewerker" Click="btMedewerker_Click" FontSize="16"/>
             <Button  x:Name="btOpdrachten" Content="Opdrachten" Click="btOpdrachten_Click" FontSize="16"/>
             <Button  x:Name="btWelcomeScreen" Content="Thuis" Click="btWelcomeScreen_Click" FontSize="16"/>
         </ComboBox>
-        <Label Content="Financiën" HorizontalAlignment="Left" Margin="418,10,0,0" VerticalAlignment="Top" Height="48" Width="194" FontSize="30"/>
-        <Label Content="Kies hieronder je filters:" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Height="32" Width="138"/>
-        <ComboBox x:Name="cbAfdeling" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" Width="120" Height="22">
+        <Label Content="Financiën" HorizontalAlignment="Left" Margin="453,10,0,0" VerticalAlignment="Top" Height="48" Width="194" FontSize="30" Grid.Column="2"/>
+        <Label Content="Kies hieronder je filters:" HorizontalAlignment="Left" Margin="1,40,0,0" VerticalAlignment="Top" Height="32" Width="138" Grid.Column="2"/>
+        <ComboBox x:Name="cbAfdeling" HorizontalAlignment="Left" Margin="1,67,0,0" VerticalAlignment="Top" Width="120" Height="22" Grid.Column="2">
             <ComboBoxItem Content="Kies Afdeling" FontSize="14"/>
-            <Button  x:Name="btBusiness" Content="Business" FontSize="16"/>
-            <Button  x:Name="btICT" Content="ICT" FontSize="16"/>
-            <Button  x:Name="btNetwerkbeheer" Content="Netwerkbeheer" FontSize="16"/>
-            <Button  x:Name="btAdministratie" Content="Administratie" FontSize="16"/>
-            <Button  x:Name="btKlantenservice" Content="Klantenservice" FontSize="16"/>
-            <Button  x:Name="btFinancien" Content="Financiën" FontSize="16"/>
         </ComboBox>
-        <ComboBox HorizontalAlignment="Left" Margin="10,113,0,0" VerticalAlignment="Top" Width="120" Height="22">
+        <ComboBox HorizontalAlignment="Left" Margin="1,94,0,0" VerticalAlignment="Top" Width="120" Height="22" Grid.Column="2">
             <ComboBoxItem Content="Kies Tijdvak" FontSize="14"/>
             <Button  x:Name="btJaar" Content="Per Jaar" FontSize="16"/>
             <Button  x:Name="btMaand" Content="Per Maand" FontSize="16"/>
         </ComboBox>
-        <DataGrid x:Name="dgWinst" HorizontalAlignment="Left" Height="266" Margin="181,86,0,0" VerticalAlignment="Top" Width="431"/>
-        <DataGrid x:Name="dgOmzet" HorizontalAlignment="Left" Height="266" Margin="181,392,0,0" VerticalAlignment="Top" Width="431"/>
-        <DataGrid x:Name="dgLoonkosten" HorizontalAlignment="Left" Height="266" Margin="630,392,0,0" VerticalAlignment="Top" Width="431"/>
-        <DataGrid x:Name="dgLoonkostenpp" HorizontalAlignment="Left" Height="266" Margin="630,86,0,0" VerticalAlignment="Top" Width="431"/>
-        <Label x:Name="lbWinst" Content="Winst" HorizontalAlignment="Left" Margin="181,55,0,0" VerticalAlignment="Top" Width="431" Height="35" FontSize="16"/>
-        <Label x:Name="lbLoonkosten" Content="Loonkosten" HorizontalAlignment="Left" Margin="630,366,0,0" VerticalAlignment="Top" Width="431" Height="35" FontSize="16"/>
-        <Label x:Name="lbOmzet" Content="Omzet" HorizontalAlignment="Left" Margin="181,366,0,0" VerticalAlignment="Top" Width="431" Height="35" FontSize="16"/>
-        <Label x:Name="lbLoonkostenpp" Content="Loonkosten per werknemer" HorizontalAlignment="Left" Margin="630,54,0,0" VerticalAlignment="Top" Width="431" Height="35" FontSize="16"/>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="110" Margin="0,40,0,0" VerticalAlignment="Top" Width="176"/>
-        <DataGrid x:Name="Afdelingskosten" HorizontalAlignment="Left" Height="266" Margin="1082,86,0,0" VerticalAlignment="Top" Width="431" Grid.ColumnSpan="3"/>
-        <Label x:Name="lbAfdelingskosten" Content="Afdelingskosten" HorizontalAlignment="Left" Margin="1082,54,0,0" VerticalAlignment="Top" Width="431" Grid.ColumnSpan="3" Height="35" FontSize="16"/>
-        <Label x:Name="lbToevoegen" Content="Toevoegen:" HorizontalAlignment="Left" Margin="10,155,0,0" VerticalAlignment="Top" Height="28" Width="166"/>
+        <DataGrid x:Name="dgWinst" HorizontalAlignment="Left" Height="266" Margin="216,86,0,0" VerticalAlignment="Top" Width="431" Grid.Column="2"/>
+        <DataGrid x:Name="dgOmzet" HorizontalAlignment="Left" Height="266" Margin="224,406,0,0" VerticalAlignment="Top" Width="431" Grid.Column="2" Grid.RowSpan="2"/>
+        <DataGrid x:Name="dgLoonkosten" HorizontalAlignment="Left" Height="266" Margin="673,406,0,0" VerticalAlignment="Top" Width="431" Grid.Column="2" Grid.RowSpan="2"/>
+        <DataGrid x:Name="dgLoonkostenpp" HorizontalAlignment="Left" Height="266" Margin="665,86,0,0" VerticalAlignment="Top" Width="431" Grid.Column="2"/>
+        <Label x:Name="lbWinst" Content="Winst" HorizontalAlignment="Left" Margin="216,55,0,0" VerticalAlignment="Top" Width="431" Height="35" FontSize="16" Grid.Column="2"/>
+        <Label x:Name="lbLoonkosten" Content="Loonkosten" HorizontalAlignment="Left" Margin="673,380,0,0" VerticalAlignment="Top" Width="431" Height="36" FontSize="16" Grid.Column="2"/>
+        <Label x:Name="lbOmzet" Content="Omzet" HorizontalAlignment="Left" Margin="224,380,0,0" VerticalAlignment="Top" Width="431" Height="36" FontSize="16" Grid.Column="2"/>
+        <Label x:Name="lbLoonkostenpp" Content="Loonkosten per werknemer" HorizontalAlignment="Left" Margin="665,54,0,0" VerticalAlignment="Top" Width="431" Height="35" FontSize="16" Grid.Column="2"/>
+        <DataGrid x:Name="Afdelingskosten" HorizontalAlignment="Left" Height="266" Margin="1117,86,0,0" VerticalAlignment="Top" Width="431" Grid.Column="2"/>
+        <Label x:Name="lbAfdelingskosten" Content="Afdelingskosten" HorizontalAlignment="Left" Margin="1117,54,0,0" VerticalAlignment="Top" Width="431" Height="35" FontSize="16" Grid.Column="2"/>
+        <Label x:Name="lbToevoegensoort" Content="Toevoegen soort:" HorizontalAlignment="Left" Margin="1,155,0,0" VerticalAlignment="Top" Height="28" Width="166" Grid.Column="2"/>
+        <DataGrid x:Name="dgRecent" HorizontalAlignment="Left" Height="266" Margin="1125,406,0,0" VerticalAlignment="Top" Width="431" Grid.Column="2" Grid.RowSpan="2"/>
+        <Label x:Name="lbRecent" Content="Recent Toegevoegde Transacties" HorizontalAlignment="Left" Margin="1125,380,0,0" VerticalAlignment="Top" Width="431" Height="36" FontSize="16" Grid.Column="2"/>
+        <TextBox x:Name="tbSoort" HorizontalAlignment="Left" Height="23" Margin="1,210,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="151" Grid.Column="2"/>
+        <Label x:Name="lbSoortNaam" Content="Soort (naam):" HorizontalAlignment="Left" Margin="1,182,0,0" VerticalAlignment="Top" Height="28" Width="166" Grid.Column="2"/>
+        <Label x:Name="lbInkomstUitgave" Content="Inkomst/Uitgave:" HorizontalAlignment="Left" Margin="1,233,0,0" VerticalAlignment="Top" Height="28" Width="166" Grid.Column="2"/>
+        <ComboBox x:Name="cbInkomstUitgave" HorizontalAlignment="Left" Margin="1,261,0,0" VerticalAlignment="Top" Width="120" Height="22" Grid.Column="2">
+            <ComboBoxItem Content="Inkomst/Uitgave"/>
+            <Button  x:Name="btInkomst" Content="Inkomst" FontSize="16" Click="BtInkomst_Click"/>
+            <Button  x:Name="btUitgave" Content="Uitgave" FontSize="16" Click="BtUitgave_Click"/>
+        </ComboBox>
+        <Label x:Name="lbToevoegenTransactie" Content="Toevoegen Transactie:" HorizontalAlignment="Left" Margin="1,325,0,0" VerticalAlignment="Top" Height="28" Width="166" Grid.Column="2"/>
+        <Label x:Name="lbOpdrachtID" Content="Opdracht (ID):" HorizontalAlignment="Left" Margin="2,357,0,0" VerticalAlignment="Top" Height="28" Width="166" Grid.Column="2"/>
+        <TextBox x:Name="tbOpdrachtID" HorizontalAlignment="Left" Height="23" Margin="3,382,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="151" Grid.Column="2"/>
+        <Label x:Name="lbmedewerkerID" Content="Medewerker (ID):" HorizontalAlignment="Left" Margin="2,404,0,0" VerticalAlignment="Top" Height="28" Width="166" Grid.Column="2"/>
+        <TextBox x:Name="tbMedewerkerID" HorizontalAlignment="Left" Height="23" Margin="3,431,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="151" Grid.Column="2"/>
+        <Label x:Name="lbSoortTransactie" Content="Soort Transactie:" HorizontalAlignment="Left" Margin="2,455,0,0" VerticalAlignment="Top" Height="28" Width="166" Grid.Column="2"/>
+        <ComboBox x:Name="cbSoortTransactie" HorizontalAlignment="Left" Margin="2,4,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120" Grid.Column="2" Height="22"/>
+        <Label x:Name="lbBedrag" Content="Bedrag:" HorizontalAlignment="Left" Margin="2,26,0,0" VerticalAlignment="Top" Height="28" Width="166" Grid.Row="1" Grid.Column="2"/>
+        <TextBox x:Name="tbBedrag" HorizontalAlignment="Left" Height="23" Margin="3,54,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="151" Grid.Row="1" Grid.Column="2"/>
+        <Label x:Name="lbDatum" Content="Datum (yyyy-mm-dd):" HorizontalAlignment="Left" Margin="2,77,0,0" VerticalAlignment="Top" Height="28" Width="166" Grid.Row="1" Grid.Column="2"/>
+        <TextBox x:Name="tbDatum" HorizontalAlignment="Left" Height="23" Margin="3,104,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="151" Grid.Row="1" Grid.Column="2"/>
+        <Button x:Name="btVoegSoortToe" Content="Voeg Toe" HorizontalAlignment="Left" Margin="1,288,0,0" VerticalAlignment="Top" Width="120" Grid.Column="2" Height="19"/>
+        <Button x:Name="btVoegTransactieToe" Content="Voeg Toe" HorizontalAlignment="Left" Margin="2,132,0,0" VerticalAlignment="Top" Width="120" Grid.Row="1" Grid.Column="2" Height="19"/>
+        <Button x:Name="btVerwijderTransactie" Content="Verwijder Transactie" HorizontalAlignment="Left" Margin="2,169,0,0" Grid.Row="1" VerticalAlignment="Top" Width="166" Height="24" Grid.Column="2"/>
+        <ListBox x:Name="lbPersoneel" HorizontalAlignment="Left" Height="237" Margin="224,264,0,-40.2" VerticalAlignment="Top" Width="527" Grid.Column="2" Grid.Row="1"/>
+        <Button x:Name="btPasToe" Content="Pas Toe" HorizontalAlignment="Left" Margin="1,121,0,0" VerticalAlignment="Top" Width="120" Height="29" Grid.Column="2"/>
+        <Label x:Name="lbMedewerker" Content="Medewerkers:" Grid.Column="2" HorizontalAlignment="Left" Margin="224,226,0,0" VerticalAlignment="Top" Height="38" Width="271" FontSize="20" Grid.Row="1"/>
+        <Button x:Name="btUpdate" Content="Update Transactie" Grid.Column="2" HorizontalAlignment="Left" Margin="2,198,0,0" Grid.Row="1" VerticalAlignment="Top" Width="166" Height="19"/>
     </Grid>
 </Window>

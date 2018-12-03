@@ -27,6 +27,7 @@ namespace NMIConsultancy
         }
 
         //Opent financiën form.
+        //Naam van button aanpassen naar btFinanciën
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Financien financien = new Financien();
