@@ -5,8 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NMIConsultancy"
         mc:Ignorable="d"
-        Title="dOpdrachten" Height="691" Width="888">
-    <Grid Margin="0,0,0,1">
+        Title="dOpdrachten" Height="692.5" Width="1192.5" Loaded="Window_Loaded">
+    <Window.Resources>
+        <local:dbi403800_nmiDataSet1 x:Key="dbi403800_nmiDataSet1"/>
+        <CollectionViewSource x:Key="klantViewSource" Source="{Binding Klant, Source={StaticResource dbi403800_nmiDataSet1}}"/>
+        <CollectionViewSource x:Key="reviewViewSource" Source="{Binding Review, Source={StaticResource dbi403800_nmiDataSet1}}"/>
+    </Window.Resources>
+    <Grid Margin="0,0,0,1" DataContext="{StaticResource klantViewSource}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="365*"/>
+            <RowDefinition Height="296*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="177*"/>
             <ColumnDefinition Width="483*"/>
@@ -20,11 +29,11 @@
             <Button x:Name="btWelcomeScreen" Content="Thuis" FontSize="16" Click="btWelcomeScreen_Click"/>
         </ComboBox>
         <Label Content="Invoer" HorizontalAlignment="Left" Margin="79,88,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.447,0.385" FontSize="15"/>
-        <TextBox x:Name="tbNaam" HorizontalAlignment="Left" Height="23" Margin="117,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="tbEmail" HorizontalAlignment="Left" Height="23" Margin="117,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="tbAdres" HorizontalAlignment="Left" Height="23" Margin="117,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="tbGeslacht" HorizontalAlignment="Left" Height="23" Margin="117,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="tbPostcode" HorizontalAlignment="Left" Height="23" Margin="117,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="tbNaam" HorizontalAlignment="Left" Height="23" Margin="117,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="tbEmail" HorizontalAlignment="Left" Height="23" Margin="117,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="tbAdres" HorizontalAlignment="Left" Height="23" Margin="117,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="tbGeslacht" HorizontalAlignment="Left" Height="23" Margin="117,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="tbPostcode" HorizontalAlignment="Left" Height="23" Margin="117,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
         <Label Content="Adres:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="11,179,0,0"/>
         <Label Content="Naam:" HorizontalAlignment="Left" Margin="13,123,0,0" VerticalAlignment="Top"/>
         <Label Content="Email:" HorizontalAlignment="Left" Margin="13,148,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.537,0.212"/>
@@ -32,29 +41,119 @@
         <Label Content="Postcode:" HorizontalAlignment="Left" Margin="11,236,0,0" VerticalAlignment="Top"/>
         <Label Content="Regio:" HorizontalAlignment="Left" Margin="11,264,0,0" VerticalAlignment="Top"/>
         <Label Content="Bedrijf:" HorizontalAlignment="Left" Margin="10,293,0,0" VerticalAlignment="Top"/>
-        <Label Content="Overzicht" HorizontalAlignment="Left" Margin="331,88,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.447,0.385" FontSize="15" Grid.Column="1"/>
-        <Label Content="Reviews" HorizontalAlignment="Left" Margin="200,360,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.447,0.385" FontSize="20" Grid.Column="1"/>
-        <DataGrid HorizontalAlignment="Left" Height="192" Margin="112,418,0,0" VerticalAlignment="Top" Width="321" Grid.Column="1"/>
-        <DataGrid HorizontalAlignment="Left" Height="193" Margin="200,123,0,0" VerticalAlignment="Top" Width="486" Grid.Column="1" Grid.ColumnSpan="2"/>
-        <Button x:Name="btVerwijderenKlant" Content="Verwijderen" HorizontalAlignment="Left" Margin="200,321,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1"/>
-        <Button x:Name="btWijzigenKlant" Content="Wijzigen" HorizontalAlignment="Left" Margin="280,321,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1"/>
-        <Button x:Name="btInvoerKlant" Content="Invoer" HorizontalAlignment="Left" Margin="140,321,0,0" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="2"/>
-        <Label Content="Management rapportages:" HorizontalAlignment="Left" Margin="463,383,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.447,0.385" Grid.Column="1" FontSize="15" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="tbRegio" HorizontalAlignment="Left" Height="23" Margin="117,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="tbBedrijf" HorizontalAlignment="Left" Height="23" Margin="117,291,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Grid.ColumnSpan="2"/>
-        <Label Content="Invoer" HorizontalAlignment="Left" Margin="79,387,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.447,0.385" FontSize="15"/>
-        <TextBox x:Name="btKlantID" HorizontalAlignment="Left" Height="23" Margin="117,422,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="tbCijfer" HorizontalAlignment="Left" Height="23" Margin="117,450,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="tbDatum" HorizontalAlignment="Left" Height="23" Margin="117,478,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Grid.ColumnSpan="2"/>
-        <Label Content="KlantID:" HorizontalAlignment="Left" Margin="13,422,0,0" VerticalAlignment="Top"/>
-        <Label Content="Cijfer:" HorizontalAlignment="Left" Margin="13,450,0,0" VerticalAlignment="Top"/>
-        <Label Content="Datum:" HorizontalAlignment="Left" Margin="13,479,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btInvoerReview" Content="Invoer" HorizontalAlignment="Left" Margin="140,506,0,0" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="2"/>
-        <Button x:Name="btVerwijderenReview" Content="Verwijderen" HorizontalAlignment="Left" Margin="112,615,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1"/>
-        <Button x:Name="btWijzigenReview" Content="Wijzigen" HorizontalAlignment="Left" Margin="192,615,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1"/>
-        <Button x:Name="btQuery1" Content="Query 1" HorizontalAlignment="Left" Margin="463,418,0,0" VerticalAlignment="Top" Width="45" Grid.Column="1" RenderTransformOrigin="1.011,0.45" Grid.ColumnSpan="2"/>
-        <Button x:Name="btQuery1_Copy" Content="Query 2" HorizontalAlignment="Left" Margin="45,418,0,0" VerticalAlignment="Top" Width="45" Grid.Column="2"/>
-        <Button x:Name="btQuery1_Copy1" Content="Query 3" HorizontalAlignment="Left" Margin="112,418,0,0" VerticalAlignment="Top" Width="46" Grid.Column="2"/>
-        <Label Content="Uitkomst:" HorizontalAlignment="Left" Margin="45,455,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.447,0.385" Grid.Column="2" FontStyle="Italic"/>
+        <Label Content="Overzicht" HorizontalAlignment="Left" Margin="278,11,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.447,0.385" FontSize="15" Grid.Column="1"/>
+        <Label Content="Reviews" HorizontalAlignment="Left" Margin="200,344,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.447,0.385" FontSize="20" Grid.Column="1" Grid.RowSpan="2"/>
+        <Button x:Name="btVerwijderenKlant" Content="Verwijderen" HorizontalAlignment="Left" Margin="95,321,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1" Click="btVerwijderenKlant_Click"/>
+        <Button x:Name="btWijzigenKlant" Content="Wijzigen" HorizontalAlignment="Left" Margin="531,337,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1" Click="btWijzigenKlant_Click"/>
+        <Button x:Name="btInvoerKlant" Content="Invoer" HorizontalAlignment="Left" Margin="140,321,0,0" VerticalAlignment="Top" Width="75" Click="btInvoerKlant_Click"/>
+        <Label Content="Management rapportages:" HorizontalAlignment="Left" Margin="64,7.5,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.447,0.385" Grid.Column="2" FontSize="15" Grid.Row="1"/>
+        <TextBox x:Name="tbRegio" HorizontalAlignment="Left" Height="23" Margin="117,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="tbBedrijf" HorizontalAlignment="Left" Height="23" Margin="117,291,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+        <Label Content="Invoer" HorizontalAlignment="Left" Margin="79,90,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.447,0.385" FontSize="15" Grid.Row="1"/>
+        <TextBox x:Name="tbKlantReview" HorizontalAlignment="Left" Height="23" Margin="117,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Grid.Row="1"/>
+        <TextBox x:Name="tbCijfer" HorizontalAlignment="Left" Height="23" Margin="117,181,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Grid.Row="1"/>
+        <Label Content="KlantID:" HorizontalAlignment="Left" Margin="21,153,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+        <Label Content="Cijfer:" HorizontalAlignment="Left" Margin="21,181,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+        <Label Content="Datum:" HorizontalAlignment="Left" Margin="24,206,0,0" VerticalAlignment="Top" Grid.Row="1" RenderTransformOrigin="0.667,-0.365"/>
+        <Button x:Name="btInvoerReview" Content="Invoer" HorizontalAlignment="Left" Margin="142,243,0,0" VerticalAlignment="Top" Width="75" Grid.Row="1" Click="btInvoerReview_Click"/>
+        <Button x:Name="btVerwijderenReview" Content="Verwijderen" HorizontalAlignment="Left" Margin="95,265.5,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1" Grid.Row="1" Click="btVerwijderenReview_Click"/>
+        <Button x:Name="btUpdateReview" Content="Update" HorizontalAlignment="Left" Margin="194,265.5,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1" Grid.Row="1"/>
+        <Button x:Name="btQuery1" Content="Query 1" HorizontalAlignment="Left" Margin="49,42.5,0,0" VerticalAlignment="Top" Width="45" Grid.Column="2" RenderTransformOrigin="1.011,0.45" Grid.Row="1"/>
+        <Button x:Name="btQuery1_Copy" Content="Query 2" HorizontalAlignment="Left" Margin="138,42.5,0,0" VerticalAlignment="Top" Width="45" Grid.Column="2" Grid.Row="1"/>
+        <Button x:Name="btQuery1_Copy1" Content="Query 3" HorizontalAlignment="Left" Margin="223,42.5,0,0" VerticalAlignment="Top" Width="46" Grid.Column="2" Grid.Row="1"/>
+        <Label Content="Uitkomst:" HorizontalAlignment="Left" Margin="124,85.5,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.447,0.385" Grid.Column="2" FontStyle="Italic" Grid.Row="1"/>
+        <DataGrid x:Name="klantDataGrid" AutoGenerateColumns="False" Grid.Column="1" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="95,97,171,49.5" RowDetailsVisibilityMode="VisibleWhenSelected">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="klantIDColumn" Binding="{Binding klantID}" Header="klant ID" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="naamColumn" Binding="{Binding naam}" Header="naam" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="emailColumn" Binding="{Binding email}" Header="email" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="adresColumn" Binding="{Binding adres}" Header="adres" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="geslachtColumn" Binding="{Binding geslacht}" Header="geslacht" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="postcodeColumn" Binding="{Binding postcode}" Header="postcode" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="regioColumn" Binding="{Binding regio}" Header="regio" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="bedrijfColumn" Binding="{Binding bedrijf}" Header="bedrijf" Width="SizeToHeader"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid x:Name="reviewDataGrid" AutoGenerateColumns="False" Grid.Column="1" EnableRowVirtualization="True" ItemsSource="{Binding Source={StaticResource reviewViewSource}}" Margin="95,39.5,315,38" RowDetailsVisibilityMode="VisibleWhenSelected" Grid.Row="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="opdrachtIDColumn" Binding="{Binding opdrachtID}" Header="opdracht ID" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="klantIDColumn1" Binding="{Binding KlantID}" Header="Klant ID" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="cijferColumn" Binding="{Binding cijfer}" Header="cijfer" Width="SizeToHeader"/>
+                <DataGridTemplateColumn x:Name="datumColumn" Header="datum" Width="SizeToHeader">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <DatePicker SelectedDate="{Binding datum, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBox x:Name="tbOpdrachtID" HorizontalAlignment="Left" Height="23" Margin="117,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Grid.Row="1"/>
+        <Label Content="OpdrachtID:" HorizontalAlignment="Left" Margin="18,125,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+        <Grid x:Name="grid1" Grid.Column="1" HorizontalAlignment="Left" Margin="531,76,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="220">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Content="klant ID:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <TextBox x:Name="klantIDTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,-11,4" Grid.Row="0" Text="{Binding klantID, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="138"/>
+            <Label Content="naam:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="1" VerticalAlignment="Center"/>
+            <TextBox x:Name="naamTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,-12,4" Grid.Row="1" Text="{Binding naam, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="138"/>
+            <Label Content="email:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="2" VerticalAlignment="Center"/>
+            <TextBox x:Name="emailTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,-13,4" Grid.Row="2" Text="{Binding email, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="138"/>
+            <Label Content="adres:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="3" VerticalAlignment="Center"/>
+            <TextBox x:Name="adresTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,-14,4" Grid.Row="3" Text="{Binding adres, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="138"/>
+            <Label Content="geslacht:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="4" VerticalAlignment="Center"/>
+            <TextBox x:Name="geslachtTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,-10,4" Grid.Row="4" Text="{Binding geslacht, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="138"/>
+            <Label Content="postcode:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="5" VerticalAlignment="Center"/>
+            <TextBox x:Name="postcodeTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,-9,4" Grid.Row="5" Text="{Binding postcode, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="138"/>
+            <Label Content="regio:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="6" VerticalAlignment="Center"/>
+            <TextBox x:Name="regioTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,-8,4" Grid.Row="6" Text="{Binding regio, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="138"/>
+            <Label Content="bedrijf:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="7" VerticalAlignment="Center"/>
+            <TextBox x:Name="bedrijfTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,-7,4" Grid.Row="7" Text="{Binding bedrijf, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="138"/>
+        </Grid>
+        <Label Content="Wijzigen:" HorizontalAlignment="Left" Margin="534,46,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.447,0.385" FontSize="15" Grid.Column="1"/>
+        <Button x:Name="btUpdateKlant" Content="Update" HorizontalAlignment="Left" Height="20" Margin="194,319,0,0" VerticalAlignment="Top" Width="84" Grid.Column="1"/>
+        <Button x:Name="btFilter" Content="filter" Grid.Column="1" HorizontalAlignment="Left" Margin="404,72,0,0" VerticalAlignment="Top" Width="75" Click="btFilter_Click"/>
+        <TextBox x:Name="tbRegioFilter" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="151,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74"/>
+        <TextBox x:Name="tbGeslachtFilter" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="309,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
+        <Label Content="Regio:" Grid.Column="1" HorizontalAlignment="Left" Margin="95,69,0,0" VerticalAlignment="Top"/>
+        <Label Content="Geslacht:" Grid.Column="1" HorizontalAlignment="Left" Margin="246,66,0,0" VerticalAlignment="Top"/>
+        <Grid x:Name="grid2" Grid.Column="1" DataContext="{StaticResource reviewViewSource}" HorizontalAlignment="Left" Margin="364,57.5,0,0" VerticalAlignment="Top" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Content="opdracht ID:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <TextBox x:Name="opdrachtIDTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" Text="{Binding opdrachtID, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="Klant ID:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="1" VerticalAlignment="Center"/>
+            <TextBox x:Name="klantReviewTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="1" Text="{Binding KlantID, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="cijfer:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="2" VerticalAlignment="Center"/>
+            <TextBox x:Name="cijferTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="2" Text="{Binding cijfer, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="datum:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="3" VerticalAlignment="Center"/>
+            <DatePicker x:Name="datumDatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="3" SelectedDate="{Binding datum, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center"/>
+        </Grid>
+        <Label Content="Wijzigen:" HorizontalAlignment="Left" Margin="364,16.5,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.447,0.385" FontSize="15" Grid.Column="1" Grid.Row="1"/>
+        <TextBox x:Name="tbFilterOpdrachtID" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="179,14,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="65"/>
+        <Button x:Name="btFilterOpdrachtID" Content="Filter" Grid.Column="1" HorizontalAlignment="Left" Margin="260,14,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="btFilterOpdrachtID_Click"/>
+        <Label x:Name="OpdrachtID_" Content="OpdrachtID:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="100,11,0,0" Grid.Row="1"/>
+        <DatePicker x:Name="dpDatumReview" HorizontalAlignment="Left" Margin="117,209,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Button x:Name="tbWijzigenReview" Content="Wijzigen" Grid.Column="1" HorizontalAlignment="Left" Margin="376,189,0,0" Grid.Row="1" VerticalAlignment="Top" Width="76" Click="tbWijzigenReview_Click"/>
     </Grid>
 </Window>

@@ -55,6 +55,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="dbi403800_nmiDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbi403800_nmiDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbi403800_nmiDataSet1.cs">
+      <DependentUpon>dbi403800_nmiDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbi403800_nmiDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbi403800_nmiDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Financiën\Afdeling.cs" />
     <Compile Include="Financiën\dFinancien.xaml.cs">
       <DependentUpon>dFinancien.xaml</DependentUpon>
@@ -122,6 +135,28 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="dbi403800_nmiDataSet.xsc">
+      <DependentUpon>dbi403800_nmiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbi403800_nmiDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbi403800_nmiDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbi403800_nmiDataSet.xss">
+      <DependentUpon>dbi403800_nmiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbi403800_nmiDataSet1.xsc">
+      <DependentUpon>dbi403800_nmiDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="dbi403800_nmiDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbi403800_nmiDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbi403800_nmiDataSet1.xss">
+      <DependentUpon>dbi403800_nmiDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NMIConsultancy.Opdrachten
 {
-    class dKlant
+    public class dKlant
     {
         
             private string naam;
@@ -17,7 +17,7 @@ namespace NMIConsultancy.Opdrachten
             private string regio;
             private string bedrijf;
 
-
+            
 
             //Variabelen worden public gemaakt met behulp van de properties en in de properties kunnen de variabelen aangepast worden 
             public string Naam
@@ -65,9 +65,9 @@ namespace NMIConsultancy.Opdrachten
 
             }*/
 
-            public dKlant()
+            public dKlant(string naam1)
             {
-                naam = "";
+                naam = naam1;
                 email = "";
                 adres = "";
                 geslacht = "";
