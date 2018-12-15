@@ -244,8 +244,6 @@ namespace NMIConsultancy
                 dbi403800_nmiDataSet1TableAdapters.ReviewTableAdapter qa = new dbi403800_nmiDataSet1TableAdapters.ReviewTableAdapter();
 
                 qa.spUpdateReview(review1.OpdrachtID, review1.KlantID, review1.Cijfer, review1.Datum);
-                dbi403800_nmiDataSet1ReviewTableAdapter.Fill(dbi403800_nmiDataSet1.Review);
-                reviewViewSource.View.MoveCurrentToFirst();
             }
             catch (SqlException ex)
             {
